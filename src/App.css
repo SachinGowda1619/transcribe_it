@@ -1,0 +1,32 @@
+.App{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.App-header{
+  text-align: center;
+  padding-top: 20px;
+}
+
+.Select-language{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.microphone{
+  text-align: center;
+}
+
+.button-container{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.button-container button{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.transcript-container{
+  padding: 10px;
+}
