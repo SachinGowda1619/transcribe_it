@@ -17,10 +17,15 @@
   text-align: center;
 }
 
+.microphone-error{
+  padding: 10px;
+}
+
 .button-container{
   display: flex;
   gap: 10px;
   justify-content: center;
+  padding: 10px;
 }
 
 .button-container button{
@@ -29,4 +34,6 @@
 
 .transcript-container{
   padding: 10px;
+  height: 500px;
+  overflow: scroll;
 }
