@@ -1,24 +1,42 @@
 .App{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .App-header{
   text-align: center;
-  padding-top: 20px;
+  justify-self: center;
+  background-color: #B82132;
+  width: 200px;
+  margin-top: 40px;
+  color: white;
+  border-radius: 10px;
 }
 
 .Select-language{
   display: flex;
   gap: 10px;
   justify-content: center;
+  font-weight: bold;
+  color: #B82132;
 }
 
-.microphone{
-  text-align: center;
+.dropdown{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border: 1px solid #D2665A;
+  background: #D2665A;
+  color: white;
+  border-radius: 6px;
 }
 
-.microphone-error{
-  padding: 10px;
+.microphone-container{
+  display: flex;
+  justify-content: center;
+}
+
+.microphone-text{
+  margin-right: 7px;
+  color: #B82132;
+  font-weight: bold;
 }
 
 .button-container{
@@ -29,11 +47,36 @@
 }
 
 .button-container button{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background: #B82132;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 65px;
+  font-size: 15px;
 }
 
 .transcript-container{
-  padding: 10px;
-  height: 500px;
+  background: #D2665A;
+  padding: 15px;
+  margin: 15px;
+  height: 400px;
   overflow: scroll;
+  border-radius: 15px;
+  color: white;
+  font-size: 18px;
+  scrollbar-width: none;
+}
+
+.thank-you{
+  text-align: center;
+  color: #B82132;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .transcript-container{
+    height: 500px;
+  }
 }

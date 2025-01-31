@@ -30,6 +30,15 @@ function App() {
 
   const copyData = () => {
     navigator.clipboard.writeText(transcript);
+    var element = document.getElementById("copy-text");
+    var originalText = element.innerText;
+    if(transcript) {
+      element.innerText = "Copied";
+    }
+
+    setTimeout(function() {
+        element.innerText = originalText;
+    }, 1000);
   }
 
   return (
@@ -37,23 +46,26 @@ function App() {
       <h2 className='App-header'>Transcribe It...!</h2>
       <div className='Select-language'>
         <div>Select language to transcribe</div>
-        <select onChange={(e) => handleLanguageSelection(e)}>
+        <select className='dropdown' onChange={(e) => handleLanguageSelection(e)}>
           <option value={'en'}>English</option>
           <option value={'kn'}>Kannada</option>
           <option value={'hi'}>Hindi</option>
         </select>
       </div>
-      <p className='microphone'>Microphone : {listening ? 'On' : 'Off'}</p>
-      {!listening && <div className='microphone-error'>Please click 'Start' to recite</div>}
+      <div className='microphone-container'>
+        <p className='microphone-text'>Microphone : </p>
+        <p style={listening ? {color: 'green'} : {color: 'red'}}>{listening ? 'On' : 'Off'}</p>
+      </div>
       <div className='button-container'>
         <button onClick={() => handleClickStart()}>Start</button>
         <button onClick={SpeechRecognition.stopListening}>Stop</button>
         <button onClick={resetTranscript}>Reset</button>
-        <button onClick={() => copyData()}>Copy</button>
+        <button onClick={() => copyData()} id='copy-text'>Copy</button>
       </div>
       <div className='transcript-container'>
-        {transcript}
+        {!listening && !transcript ? "Please click 'Start' to recite" : transcript}
       </div>
+      <p className='thank-you'>Than you!</p>
     </div>
   );
 }
