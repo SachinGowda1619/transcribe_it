@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/transcribe_it/static/css/main.d838182c.css",
+    "main.js": "/transcribe_it/static/js/main.9699a6e2.js",
+    "index.html": "/transcribe_it/index.html",
+    "main.d838182c.css.map": "/transcribe_it/static/css/main.d838182c.css.map",
+    "main.9699a6e2.js.map": "/transcribe_it/static/js/main.9699a6e2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d838182c.css",
+    "static/js/main.9699a6e2.js"
+  ]
+}
